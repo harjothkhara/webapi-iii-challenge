@@ -11,7 +11,7 @@ server.use(express.json());
 server.use(logger);
 
 server.use('/api/users', userRouter);
-server.use('/api/posts', postRouter)
+server.use('/api/posts', postRouter);
 
 
 server.get('/', (req, res) => {
