@@ -1,4 +1,4 @@
-// require('dotenv').config(); //reads .env and merges it into process.env
+require('dotenv').config();
 
 const server = require('./server.js');
 
