@@ -8,7 +8,8 @@ const router = express.Router();
 router.get('/', async (req, res) => {
     try{
         const posts = await Posts.get(req.query);
-        res.status(200).json(posts);
+        res.status(200).json({ messageOfTheDay: process.env.MOTD,
+            posts});
     } catch(error) {
         console.log(error);
         res.status(500).json({ message: "Error retrieving the users"})
